@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#logo{
+    margin: 8px 34px;
+}
+
+#logo img{
+    height: 34px;
+    margin: 3px 6px;
+}
+
+#navbar ul{
+    display: flex;
+    font-family: 'anaghm', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.7rem;
+}
+
+#navbar ul li a{
+    color: rgb(254 29 135);
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('pexels-free-creative-stuff-1193743.jpg') no-repeat center center/cover;
+    height: 700px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+#home h1{
+    color:rgb(221 98 31);;
+    font-size: 4.2rem ;
+    -webkit-text-stroke-width: 4.1px;
+    /* -webkit-text-stroke-color: gray; */
+    /* background-color: #ff8d008c; */
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+}
+
+#home{
+    color:rgba(14, 5, 54, 0.911);
+    text-align: center;
+    font-size: 2.0rem;
+    /* background-color: lightblue; */
+    margin: 15px;
+    border-radius: 5px;
+    /* -webkit-font-feature-settings: "onum"; */
+    font-family: 'Libre Baskerville', serif;
+}
+
+#front{
+    text-align: right;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: #fa227a;
+    color: white;
+    margin: 30px;
+    font-size: 2rem;
+    border-radius: 12px;
+    cursor:pointer;
+}
+
+#quotes{
+    margin: 34px;
+    display: flex;
+}
+#quotes .box{ 
+    border: 2px solid  #f52477;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+}
+
+#quotes .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#quotes .box p{
+    font-family: 'Libra Baskerville', serif;
+
+} 
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Libre Baskerville', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: #fa227a;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+    font:'Libre Baskerville',serif;
+    font-size: 1.5em;
+
+}
+
+.mid{
+    text-align: center;
+    font:'Libre Baskerville',serif;
+    font-size: 4.5em;
+    margin: 5rem;
+    
+}
+
+#allquotes{
+    margin: 34px;
+    display: -moz-stack;
+}
+
+.blockquote{
+    max-width: 100%;
+    margin:70px 30px;
+    padding: 30px;
+    background: #f2f2f2;
+    border:1px solid #f52477;
+    color : #0b0b0b;
+    box-sizing: border-box;
+}
+
+.blockquote--bordered{
+    border-left-width: 10px;
+}
+
+.blockquote--quoted::before{
+    content: "\201a";
+    font-size: 100px;
+}
+.blockquote__text{
+    font:'Libre Baskerville',serif;
+    font-style: italic;
+    line-height: 1.2;
+    font-size: 1.5em;
+}
+
+.blockquote__text--credit{
+    font-weight: bold;
+    font-style: normal;
+    text-align: right;
+}
+
+.blockquote__text--credit::before{
+    content: "\2014\0020";
+}
+
+.heading{
+    text-align: center;
+    font:'Libre Baskerville',serif;
+    line-height: 1.0;
+    font-size: 2.5em;
+
+}
