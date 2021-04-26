@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #1b2522;
+}
+
+/* Header Section */
+
+.full-screen-header {
+  height: 100vh;
+  background-image: url("img/header_image.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b2522;
+  padding: 0.5rem 1rem;
+}
+
+.nav-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  box-sizing: border-box;
+  width: 50px;
+  position: relative;
+  left: 150px;
+  size: 40px;
+  font-size: 15px;
+  color: #fff;
+  z-index: 100;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-list a {
+  text-decoration: none;
+  margin: 2rem;
+  color: #fff;
+}
+
+.nav-list a:hover {
+  color: #ccc;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+  border-radius: 10000px;
+  padding: 0.25em 1em;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+.btn:hover,
+.btn:focus {
+  background-color: hsl(200, 100%, 40%);
+}
+
+.scroll-down-icon {
+  position: absolute;
+  bottom: 1rem;
+  width: 30px;
+}
+
+/*************** Grid Section *********************/
+
+section {
+  padding: 2rem;
+}
+
+.section-title {
+  margin: 0;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: black;
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 450px));
+  justify-content: center;
+  row-gap: 10px;
+  column-gap: 50px;
+}
+
+.curriculum-grid-item {
+  display: flex;
+  align-items: center;
+}
+.curriculum-grid-item img {
+  width: 50px;
+  margin-right: 1rem;
+}
+
+/******Cards***************/
+
+.section-accent {
+  background-color: #0af;
+}
+
+.pricing-cards-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-card {
+  padding: 1rem;
+  background-color: #dcf4ff;
+  border: 1px solid black;
+  border-radius: 0.3em;
+  margin: 1rem 0;
+
+  transition: transform 100ms;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+}
+
+.pricing-card.accent {
+  background-color: white;
+  margin: 0;
+}
+
+.pricing-card:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+  transform-origin: right;
+}
+
+.pricing-card:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+  transform-origin: left;
+}
+
+.price-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.plan-name {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.plan-price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.plan-price::after {
+  content: "/mo";
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.feature {
+  margin-bottom: 0.5rem;
+}
+
+.feature.inactive {
+  color: #777;
+  text-decoration: line-through;
+}
+
+.feature:last-child {
+  margin-bottom: 0;
+}
+
+.btn-grow {
+  animation: btn-grow-enter var(--btn-grow-duration) var(--btn-grow-delay)
+    backwards;
+}
+
+.btn-grow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px 1px black;
+}
+/**************Contacts**********************/
+.form {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form label {
+  color: black;
+  font-weight: bold;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  outline: none;
+  border: 1px solid #1b2522;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  color: inherit;
+  font-family: inherit;
+
+  transition: border-color 100ms;
+}
+
+.form textarea {
+  resize: vertical;
+  min-height: 75px;
+  max-height: 200px;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #0af;
+}
+
+.btn-container {
+  text-align: end;
+}
+
+.btn-square {
+  border-radius: 0.3em;
+}
+
+/******************Footer**************/
